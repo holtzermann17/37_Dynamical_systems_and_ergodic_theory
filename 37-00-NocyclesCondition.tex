@@ -1,0 +1,64 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NocyclesCondition}
+\pmcreated{2013-03-22 14:30:53}
+\pmmodified{2013-03-22 14:30:53}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{no-cycles condition}
+\pmrecord{5}{36054}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37-00}
+\pmclassification{msc}{37C75}
+\pmsynonym{no-cycles}{NocyclesCondition}
+\pmsynonym{no-cycle}{NocyclesCondition}
+\pmsynonym{no cycles condition}{NocyclesCondition}
+\pmsynonym{cycle}{NocyclesCondition}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+\PMlinkescapeword{satisfies}
+Let $X$ be a metric space and let $f\colon X\to X$ be a homeomorphism.
+Suppose $\mathcal F= \{\Lambda_1,\dots,\Lambda_k\}$ is a family of compact invariant sets for $f$. Define a relation $\rightarrow$ on $\mathcal{F}$ by $\Lambda_i \rightarrow \Lambda_j$ if $$W^u(\Lambda_i)\cap W^s(\Lambda_j) - \bigcup_{l=1}^k \Lambda_l \neq \emptyset,$$
+that is, if the unstable set of $\Lambda_i$ intersects the stable set of $\Lambda_j$ outside the union of the $\Lambda_l$'s.
+
+A cycle for $\mathcal F$ is a sequence $\{n_i:i=1,\dots,j\}$ such that 
+$$\Lambda_{n_i}\rightarrow \Lambda_{n_{i+1}}$$
+for $1\leq i<j$ and 
+$$\Lambda_{n_j}\rightarrow \Lambda_{n_1}.$$
+With some abuse of notation, we can write this as
+$$\Lambda_{n_1}\rightarrow\Lambda_{n_2}\rightarrow\cdots\rightarrow\Lambda_{n_j}\rightarrow\Lambda_{n_1}.$$
+
+If $\mathcal{F}$ has no cycles, then we say that it satisfies the \emph{no-cycles condition}.
+%%%%%
+%%%%%
+\end{document}

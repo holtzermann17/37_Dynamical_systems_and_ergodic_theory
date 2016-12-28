@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PoincareRecurrenceTheorem}
+\pmcreated{2013-03-22 14:29:50}
+\pmmodified{2013-03-22 14:29:50}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Poincar\'e recurrence theorem}
+\pmrecord{6}{36033}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B20}
+\pmclassification{msc}{37A05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+\newtheorem{theorem}{Theorem}
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $(X,\mathscr{S},\mu)$ be a probability space and let $f\colon X\to X$
+be a measure preserving transformation.
+
+\begin{theorem} For any $E\in \mathscr{S}$,
+the set of those points $x$ of $E$ such that $f^n(x)\notin E$ for all
+$n>0$ has zero measure. That is, almost every point of $E$ returns to
+$E$. In fact, almost every point returns infinitely often; i.e.
+$$\mu\left(\{x\in E:\textnormal{ there exists } N \textnormal{
+such that }f^n(x)\notin E \textnormal{ for all } n>N\}\right)=0.$$
+\end{theorem}
+
+The following is a topological version of this theorem:
+
+\begin{theorem} If $X$ is a second countable Hausdorff space and
+$\mathscr{S}$ contains the Borel sigma-algebra, then the
+set of recurrent points of $f$ has full measure. That is, almost every
+point is recurrent.
+\end{theorem}
+%%%%%
+%%%%%
+\end{document}

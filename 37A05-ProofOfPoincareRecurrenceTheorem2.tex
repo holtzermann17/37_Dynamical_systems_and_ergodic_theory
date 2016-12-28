@@ -1,0 +1,52 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPoincareRecurrenceTheorem2}
+\pmcreated{2013-03-22 14:29:58}
+\pmmodified{2013-03-22 14:29:58}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{proof of Poincar\'e recurrence theorem 2}
+\pmrecord{5}{36036}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37A05}
+\pmclassification{msc}{37B20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $\{U_n : n\in \N\}$ be a basis of open sets for $X$, and for each $n$ define
+$$U_n' = \{x\in U_n : \forall n\geq 1,\, f^n(x) \notin U_n \}.$$
+From theorem 1 we know that $\mu(U_n')=0$. Let $N=\bigcup_{n\in \N} U_n'.$
+Then $\mu(N)=0$. We assert that if $x\in X-N$ then $x$ is recurrent. In fact,
+given a neighborhood $U$ of $x$, there is a basic neighborhood $U_n$ such that $x\subset U_n\subset U$, and since $x\notin N$ we have that $x\in U_n-U_n'$ which by definition of $U_n'$ means that there exists $n\geq 1$ such that $f^n(x)\in U_n\subset U$; thus $x$ is recurrent. $\Box$
+%%%%%
+%%%%%
+\end{document}

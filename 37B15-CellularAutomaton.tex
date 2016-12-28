@@ -1,0 +1,198 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CellularAutomaton}
+\pmcreated{2013-03-22 19:21:58}
+\pmmodified{2013-03-22 19:21:58}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{cellular automaton}
+\pmrecord{5}{42319}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B15}
+\pmclassification{msc}{68Q80}
+\pmdefines{neighborhood (cellular automaton)}
+\pmdefines{neighborhood index (cellular automaton)}
+\pmdefines{local function (cellular automaton)}
+\pmdefines{global function (cellular automaton)}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newcommand{\Acal}{\ensuremath{\mathcal{A}}}
+\newcommand{\Neigh}{\ensuremath{\mathcal{N}}}
+\newcommand{\restrict}[2]{\left.{#1}\right|_{#2}}
+\newcommand{\Zset}{\ensuremath{\mathbb{Z}}}
+
+A $d$-dimensional \emph{cellular automaton}
+is a triple
+\begin{math}
+\Acal = \langle Q,\Neigh,f \rangle
+\end{math}
+where:
+\begin{enumerate}
+\item
+$Q$ is a nonempty set, called \emph{alphabet} or \emph{set of states}.
+\label{it:ca-states}
+\item
+\begin{math}
+\Neigh = \{ \nu_1, \ldots, \nu_{|\Neigh|} \}
+\end{math}
+is a \emph{finite, nonempty} subset of $\Zset^d$,
+called \emph{neighborhood index}.
+\label{it:ca-neigh}
+\item
+$f : Q^\Neigh \to Q$ is the \emph{local function}.
+\label{it:ca-loc}
+\end{enumerate}
+The local function of the cellular automaton $\Acal$
+induces, by synchronous application at all points,
+a \emph{global function} $F_\Acal$
+on $d$-dimensional \emph{configurations} $c : \Zset^d \to Q$:
+\begin{equation} \label{eq:ca-glob}
+F_\Acal(c)(z)
+= f \left( c(z+\nu_1), \ldots, c(z+\nu_{|\Neigh|}) \right)
+= f \left( \restrict{c}{z+\Neigh} \right) \;.
+\end{equation}
+Observe that the global function is continuous in the product topology.
+
+\medskip
+
+Cellular automata are a Turing-complete model of computation.
+In fact, given a Turing machine,
+it is straightforward to construct a cellular automaton
+that emulates it in real time.
+On the other hand,
+given a one-dimensional cellular automaton,
+there exists a Turing machine
+that emulates it in linear time
+with respect to the size of the input.
+
+\iffalse
+Given a one-head Turing machine
+\begin{math}
+T = \langle S, s,t,r, \Sigma, B, \delta \rangle,
+\end{math}
+it is straightforward to construct
+a one-dimensional cellular automaton
+\begin{math}
+\Acal_T = \langle Q, \Neigh, f \rangle
+\end{math}
+that simulates $T$,
+by putting
+\begin{math}
+Q = S \times \Sigma \times \{0,1\},
+\end{math}
+\begin{math}
+\Neigh = \{-1,0,1\},
+\end{math}
+and, for $q_x = (s_x,\sigma_x,h_x)$,
+\begin{math}
+f(q_{-1},q_0,q_1) = (s,\sigma,h)
+\end{math}
+where:
+\begin{itemize}
+\item
+$s$ is
+\begin{math}
+\pi_S \circ \delta(s_0,\sigma_0)
+\end{math}
+if $h_0=1$, and $s_0$ otherwise.
+\item
+$\sigma$ is
+\begin{math}
+\pi_\Sigma \circ \delta(s_0,\sigma_0)
+\end{math}
+if $h_0=1$, and $s_0$ otherwise.
+\item
+$h$ is 1 if
+either $h_{-1}=1$ and
+\begin{math}
+\pi_{L,R} \circ \delta(s_{-1},\sigma_{-1}) = R,
+\end{math}
+or $h_{1}=1$ and
+\begin{math}
+\pi_{L,R} \circ \delta(s_1,\sigma_1) = L;
+\end{math}
+and 0 otherwise.
+\end{itemize}
+Then the $S$-component of $Q$ simulates the state alphabet of $T$,
+the $\Sigma$-component of $Q$ simulates the input alphabet,
+and the $\{0,1\}$-component simulates the read/write head.
+\fi
+
+\medskip
+
+Cellular automata make good tools for \emph{qualitative analysis}.
+In fact, given the description of a cellular automaton,
+it is straightforward to write a computer program
+that implements its features.
+Also, several phenomena in different fields of sciences
+--- from physics to biology to sociology ---
+can be described in terms of finite-range interactions between discrete agents.
+
+On the other hand,
+retrieving the properties of the global dynamics from the local description
+is usually a very difficult task,
+and may depend on the dimension.
+As an example,
+reversibility of the global function
+is decidable in dimension $1$ but not in dimension $2$ (or higher).
+
+\medskip
+
+The definition above can be generalized to the case
+of a generic group $G$ acting by \emph{translations}
+on the space $Q^G$ of configurations.
+If
+\begin{equation} \label{eq:transl}
+L_g(x) = g \cdot x \;\; \forall x \in G \;,
+\end{equation}
+then the local function $f : Q^{\Neigh} \to Q$
+($\Neigh$ being a finite nonempty subset of $G$)
+induces $F_\Acal : Q^G \to Q^G$
+via the relation
+\begin{equation} \label{eq:glob-gen}
+F_\Acal(c)(g)
+= f \left( \restrict{(c \circ L_g)}{\Neigh} \right)
+= f \left( \restrict{c}{g\Neigh} \right)
+\;\; \forall c : G \to Q\;.
+\end{equation}
+Observe that $L = \{L_g\}_{g \in G}$ is a \emph{left} action,
+while $(c,g) \mapsto c \circ L_g$ is a \emph{right} action.
+It is of course possible to only use left action
+by defining $F_\Acal(c)(g)$ as
+\begin{math}
+f \left( \restrict{(c \circ L_{g^{-1}})}{\Neigh} \right)
+\end{math}
+instead:
+since this is just a \emph{reparametrization} of the family $L$,
+the bulk of the theory does not change.
+
+More to come \ldots
+
+%%%%%
+%%%%%
+\end{document}

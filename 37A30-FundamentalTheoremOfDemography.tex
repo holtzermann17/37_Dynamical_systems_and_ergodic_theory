@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FundamentalTheoremOfDemography}
+\pmcreated{2013-03-22 13:18:28}
+\pmmodified{2013-03-22 13:18:28}
+\pmowner{jarino}{552}
+\pmmodifier{jarino}{552}
+\pmtitle{fundamental theorem of demography}
+\pmrecord{6}{33813}
+\pmprivacy{1}
+\pmauthor{jarino}{552}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37A30}
+\pmclassification{msc}{92D25}
+\pmsynonym{a weak ergodic theorem}{FundamentalTheoremOfDemography}
+\pmrelated{PerronFrobeniusTheorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $A_t$ be a sequence of $n\times n$ nonnegative primitive matrices. Suppose that $A_t\to A_\infty$, with $A_\infty$ also a nonnegative primitive matrix. Define the sequence $x_{t+1}=A_tx_t$, with $x_t\in\mathbb{R}^n$. 
+If $x_0\geq 0$, then
+\[
+\lim_{t\to\infty} \frac{x_t}{\|x_t\|} =p
+\]
+where $p$ is the normalized ($\|p\|=1$) eigenvector associated to the \PMlinkescapetext{dominant} eigenvalue of $A_\infty$ (also called the Perron-Frobenius eigenvector of $A_\infty$).
+%%%%%
+%%%%%
+\end{document}

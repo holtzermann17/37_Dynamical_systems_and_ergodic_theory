@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalEntropy}
+\pmcreated{2013-03-22 14:31:34}
+\pmmodified{2013-03-22 14:31:34}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{topological entropy}
+\pmrecord{7}{36068}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B40}
+\pmsynonym{entropy}{TopologicalEntropy}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $(X,d)$ be a compact metric space and $f\colon X\to X$ a continuous map.
+For each $n\geq 0$, we define a new metric $d_n$ by $$d_n(x,y)=\max\{d(f^i(x),f^i(y)): 0\leq i<n\}.$$
+Two points are $\epsilon$-close with respect to this metric if their first $n$ iterates are $\epsilon$-close.
+For $\epsilon>0$ and $n\geq 0$ we say that $F\subset X$ is an $(n,\epsilon)$-separated set if for each pair $x,y$ of points of $F$ we have $d_n(x,y)>\epsilon$. Denote by $N(n,\epsilon)$ the maximum cardinality of an $(n,\epsilon)$-separated set (which is finite, because $X$ is compact). Roughly, $N(n,\epsilon)$ represents the number of ``distinguishable'' orbit segments of length $n$, assuming we cannot distinguish points that are less than $\epsilon$ apart. 
+The topological entropy of $f$ is defined by
+$$h_{top}(f)=\lim_{\epsilon\to 0} \left(\limsup_{n\to \infty} \frac{1}{n}\log N(n,\epsilon)\right).$$
+It is easy to see that this limit always exists, but it could be infinite.
+A rough interpretation of this number is that it measures the average exponential growth of the number of distinguishable orbit segments. Hence, roughly speaking again, we could say that the higher the topological entropy is, the more essentially different orbits we have. 
+
+Topological entropy was first introduced in 1965 by Adler, Konheim and McAndrew, with a different (but equivalent) definition to the one presented here. The definition we give here is due to Bowen and Dinaburg.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FeigenbaumFractal}
+\pmcreated{2013-03-22 12:34:18}
+\pmmodified{2013-03-22 12:34:18}
+\pmowner{akrowne}{2}
+\pmmodifier{akrowne}{2}
+\pmtitle{Feigenbaum fractal}
+\pmrecord{6}{32820}
+\pmprivacy{1}
+\pmauthor{akrowne}{2}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37G15}
+\pmsynonym{Feigenbaum tree}{FeigenbaumFractal}
+\pmdefines{logistic map}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+%\usepackage{psfrag}
+\usepackage{graphicx}
+%%%\usepackage{xypic}
+\begin{document}
+\PMlinkescapeword{cycle}
+\PMlinkescapeword{image}
+\PMlinkescapeword{graph}
+A \emph{Feigenbaum fractal} is any bifurcation fractal produced by a period-doubling cascade.  The ``canonical'' Feigenbaum fractal is produced by the logistic map (a simple population model), 
+
+$$ y' = \mu \cdot y  (1 - y) $$
+
+where $\mu$ is varied smoothly along one dimension.  The logistic iteration either terminates in a cycle (set of repeating values) or behaves chaotically.  If one plots the points of this cycle versus the $\mu$-value, a graph like the following is produced:
+
+\begin{center}
+\includegraphics[scale=.8]{feigen.eps}
+\end{center}
+
+Note the distinct bifurcation (branching) points and the chaotic behavior as $\mu$ increases.
+
+Many other iterations will generate this same type of plot, for example the iteration 
+
+$$ p' = r \cdot \sin(\pi\cdot p) $$
+
+One of the most amazing things about this class of fractals is that the bifurcation intervals are always described by Feigenbaum's constant.
+
+Octave/Matlab Code to generate the above image is available \PMlinktofile{here}{octave_feigen.zip}.
+
+\paragraph{References.}
+
+\begin{itemize}
+\item ``Quadratic Iteration, bifurcation, and chaos'': \PMlinkexternal{http://mathforum.org/advanced/robertd/bifurcation.html}{http://mathforum.org/advanced/robertd/bifurcation.html}
+\item ``Bifurcation'': \PMlinkexternal{http://spanky.triumf.ca/www/fractint/bif_type.html}{http://spanky.triumf.ca/www/fractint/bif_type.html}
+\item ``Feigenbaum's Constant'': \PMlinkexternal{http://fractals.iuta.u-bordeaux.fr/sci-faq/feigenbaum.html}{http://fractals.iuta.u-bordeaux.fr/sci-faq/feigenbaum.html}
+\end{itemize}
+%%%%%
+%%%%%
+\end{document}

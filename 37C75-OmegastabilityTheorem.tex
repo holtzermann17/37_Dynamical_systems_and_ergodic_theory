@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OmegastabilityTheorem}
+\pmcreated{2013-03-22 14:30:55}
+\pmmodified{2013-03-22 14:30:55}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{$\Omega$-stability theorem}
+\pmrecord{8}{36055}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37C75}
+\pmsynonym{omega-stability theorem}{OmegastabilityTheorem}
+\pmsynonym{Smale's $\Omega$-stability theorem}{OmegastabilityTheorem}
+\pmdefines{$\Omega$-stable}
+\pmdefines{omega-stable}
+\pmdefines{$\Omega$-stability}
+\pmdefines{omega-stability}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+\PMlinkescapeword{satisfies}
+
+Let $M$ be a differentiable manifold and let $f\colon M\to M$ be a $\mathcal{C}^k$ diffeomorphism. We say that $f$ is $\mathcal{C}^k$-$\Omega$-stable, if there is a neighborhood $\mathcal{U}$ of $f$ in the $\mathcal{C}^k$ topology of $\operatorname{Diff}^k(M)$ such that for any $g\in \mathcal{U}$, $f|_{\Omega(f)}$ is topologically conjugate to $g|_{\Omega(g)}$.
+
+$\Omega$-\textbf{stability theorem}. If $f$ is Axiom A and satisfies the no-cycles condition, then $f$ is $\mathcal{C}^1$-$\Omega$-stable.
+
+\emph{Remark.} The reciprocal of this theorem is also true (the difficult part is showing that $\Omega$-stability implies Axiom A), but it is unknown whether $\mathcal{C}^k$-$\Omega$-stability implies Axiom A when $k>1$. This is known as the $\mathcal{C}^k$ \emph{$\Omega$-stability conjecture}.
+%%%%%
+%%%%%
+\end{document}

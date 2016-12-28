@@ -1,0 +1,90 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StableManifold}
+\pmcreated{2013-03-22 13:41:07}
+\pmmodified{2013-03-22 13:41:07}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{stable manifold}
+\pmrecord{11}{34357}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37D10}
+\pmclassification{msc}{37C75}
+\pmsynonym{stable set}{StableManifold}
+\pmsynonym{unstable set}{StableManifold}
+\pmsynonym{unstable manifold}{StableManifold}
+\pmrelated{HyperbolicFixedPoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Cdiff}{\mathcal{C}}
+\renewcommand{\emph}{\textbf}
+\begin{document}
+\PMlinkescapeword{stable}
+
+ Let $X$ be a topological space, and $f\colon X\rightarrow X$ a
+homeomorphism. If $p$ is a fixed point for $f$, the \emph{stable and
+unstable sets} of $p$ are defined by 
+\begin{align*}
+W^s(f,p)&=\{q\in X: f^n(q)\xrightarrow[n\rightarrow\infty]{} p\},\\ 
+W^u(f,p)&=\{q\in X: f^{-n}(q)\xrightarrow[n\rightarrow\infty]{} p\}, 
+\end{align*}
+respectively.
+
+If $p$ is a periodic point of least period $k$, then it is a fixed point of $f^k$, and the stable and unstable sets of $p$ are 
+\begin{align*}
+W^s(f,p)&= W^s(f^k,p)\\
+W^u(f,p)&=W^u(f^k,p).
+\end{align*}
+
+Given a neighborhood $U$ of $p$, the \emph{local stable and unstable sets} of $p$ are defined by
+\begin{align*}
+W^s_{\text{loc}}(f,p,U)&= \{q\in U: f^n(q)\in U \textnormal{ for each }
+n\geq 0\},\\ 
+W^u_{\text{loc}}(f,p,U)&= W^s_{\text{loc}}(f^{-1},p,U).
+\end{align*}
+
+If $X$ is metrizable, we can define the stable and unstable sets for any point by
+\begin{align*}
+W^s(f,p) &= \{q\in U: d(f^n(q),f^n(p))\xrightarrow[n\rightarrow\infty]{} 0\},\\
+W^u(f,p) &= W^s(f^{-1},p),
+\end{align*} 
+where $d$ is a metric for $X$. This definition clearly
+coincides with the previous one when $p$ is a periodic point.
+
+When $K$ is an invariant subset of $X$, one usually denotes by $W^s(f,K)$ and $W^u(f,K)$ (or just $W^s(K)$ and $W^u(K)$) the stable and unstable sets of $K$, defined as the set of points $x\in X$ such that $d(f^n(x),K)\to 0$ when $x\to \infty$ or $-\infty$, respectively.
+
+Suppose now that $X$ is a compact smooth manifold, and $f$ is a $\Cdiff^k$
+diffeomorphism, $k\geq 1$. If $p$ is a hyperbolic periodic point, the stable manifold theorem assures that for some neighborhood $U$ of $p$, the local stable and unstable sets are $\Cdiff^k$ embedded disks, whose tangent spaces at $p$ are $E^s$ and $E^u$ (the stable and unstable spaces of $Df(p)$), respectively; moreover, they vary continuously (in certain sense) in a neighborhood of $f$ in the $\Cdiff^k$ topology of $\Diff^k(X)$ (the space of all $\Cdiff^k$ diffeomorphisms from $X$ to itself). Finally, the stable and unstable sets are $\Cdiff^k$ injectively immersed disks.  This is why they are commonly called \emph{stable and unstable} manifolds. This result is also valid for nonperiodic points, as long as they lie in some hyperbolic set (stable manifold theorem for hyperbolic sets).
+%%%%%
+%%%%%
+\end{document}

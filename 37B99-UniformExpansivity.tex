@@ -1,0 +1,51 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{UniformExpansivity}
+\pmcreated{2013-03-22 13:55:15}
+\pmmodified{2013-03-22 13:55:15}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{uniform expansivity}
+\pmrecord{7}{34678}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $(X,d)$ be a compact metric space and let $f\colon X\to X$ be an expansive homeomorphism. 
+
+\textbf{Theorem (uniform expansivity).} For every $\epsilon>0$ and $\delta>0$ there is $N>0$ such that for each pair $x,y$ of points of $X$ such that $d(x,y)>\epsilon$ there is $n\in \Z$ with $|n|\leq N$ such that $d(f^n(x),f^n(y)) > c-\delta$, where $c$ is the expansivity constant of $f$.
+
+\textbf{Proof.} Let $K=\{(x,y)\in X\times X: d(x,y)\geq \epsilon/2\}$. Then K is closed, and hence compact. For each pair $(x,y)\in K$, there is $n_{(x,y)}\in \Z$ such that $d(f^{n_{(x,y)}}(x),f^{n_{(x,y)}}(y))\geq c$. Since the mapping $F\colon X\times X\to X\times X$ defined by $F(x,y)=(f(x),f(y))$ is continuous, $F^{n_x}$ is also continuous and there is a neighborhood $U_{(x,y)}$ of each $(x,y)\in K$ such that $d(f^{n_{(x,y)}}(u),f^{n_{(x,y)}}(v))<c-\delta$ for each $(u,v)\in U_{(x,y)}$. Since $K$ is compact and $\{U_{(x,y)}:(x,y)\in K\}$ is an open cover of $K$, there is a finite subcover $\{U_{(x_i,y_i)} : 1\leq i \leq m\}$. Let $N=\max\{|n_{(x_i,y_i)}|:1\leq i\leq m\}$. If $d(x,y)>\epsilon$, then $(x,y)\in K$, so that $(x,y)\in U_{(x_i,y_i)}$ for some $i\in \{1,\dots,m\}$. Thus for $n=n_{(x_i,y_i)}$ we have $d(f^n(x),f^n(y))<c-\delta$ and $|n|\leq N$ as requred.
+%%%%%
+%%%%%
+\end{document}

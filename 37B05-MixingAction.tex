@@ -1,0 +1,82 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MixingAction}
+\pmcreated{2013-03-22 19:19:32}
+\pmmodified{2013-03-22 19:19:32}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{mixing action}
+\pmrecord{5}{42265}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newcommand{\restrict}[2]{\left.{#1}\right|_{#2}}
+
+Let $X$ be a topological space and let $G$ be a semigroup.
+An action $\phi=\{\phi_g\}_{g \in G}$ of $G$ on $X$ is (topologically) mixing
+if, given any two \emph{open} subsets $U$, $V$ of $X$,
+the intersection $U \cap \phi_g(V)$ is nonempty
+for all $g \in G$ except at most finitely many.
+
+\medskip
+
+\textbf{Example 1.}
+Let $F : X \to X$ be a continuous function.
+Then $F$ is topologically mixing if and only if
+the action of the monoid $\mathbb{N}$ on $X$
+defined by $\phi_n(x) = F^n(x)$
+is mixing according to the definition given above.
+
+\medskip
+
+\textbf{Example 2.}
+Suppose $X$ is a discrete nonempty set and $G$ is a group;
+endow $X^G$ with the product topology.
+The action of $G$ on $X^G$ defined by
+\begin{displaymath}
+\phi_g(c)(z) = c(g \cdot z) \;\; \forall c : G \to X
+\end{displaymath}
+is mixing.
+
+To prove this fact,
+we may suppose without loss of generality
+that $U$ and $V$ are two \emph{cylindric sets}
+of the form:
+\begin{eqnarray*}
+U & = & \{ c \in X^G \mid \restrict{c}{E} = \restrict{u}{E} \} \\
+V & = & \{ c \in X^G \mid \restrict{c}{F} = \restrict{v}{F} \}
+\end{eqnarray*}
+for suitable finite subsets $E,F \subseteq G$ and functions $u,v : G \to X$.
+Then the only chance for $U \cap \phi_g(V)$ to be empty,
+is that $e = gf$ for some $e \in E$, $f \in F$
+such that $u(e) \neq v(f)$:
+but then, $g \in EF^{-1}$, which is finite.
+%%%%%
+%%%%%
+\end{document}

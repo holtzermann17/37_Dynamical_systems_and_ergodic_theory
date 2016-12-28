@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperbolicIsomorphism}
+\pmcreated{2013-03-22 13:39:34}
+\pmmodified{2013-03-22 13:39:34}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{hyperbolic isomorphism}
+\pmrecord{10}{34315}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37D05}
+\pmclassification{msc}{46B03}
+\pmsynonym{linear hyperbolic isomorphism}{HyperbolicIsomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+Let $X$ be a Banach space and $T:X\to X$ a continuous linear isomorphism. We say that $T$ is an \emph{hyperbolic isomorphism} if its spectrum is disjoint with the unit circle, i.e. $\sigma(T)\cap \{z\in \C:|z|=1\}=\emptyset$.
+
+If this is the case, by the spectral theorem there is a 
+splitting of $X$ into two invariant subspaces, $X=E^s\oplus E^u$ (and therefore, a corresponding splitting of $T$ into two operators $T^s:E^s\to E^s$ and $T_u:E^u\to E^u$, i.e. $T=T_s\oplus
+T_u$), such that $\sigma(T_s) = \sigma(T)\cap \{z:|z|<1\}$ and $\sigma(T_u)=\sigma(T)\cap\{z:|z|>1\}$. Also, for any $\lambda$ greater than the spectral radius of both $T_s$ and $T_u^{-1}$ there exists an equivalent (box-type) norm $\|\cdot\|_1$ such that 
+$$\|T_s\|_1 < \lambda \textnormal{ and } \|T_u^{-1}\|_1 < \lambda$$
+and $$\|x\|_1 = \max\{\|x_u\|_1,\|x_s\|_1\}.$$
+In particular, $\lambda$ can be chosen smaller than $1$, so that $T_s$ and $T_u^{-1}$ are contractions.
+%%%%%
+%%%%%
+\end{document}

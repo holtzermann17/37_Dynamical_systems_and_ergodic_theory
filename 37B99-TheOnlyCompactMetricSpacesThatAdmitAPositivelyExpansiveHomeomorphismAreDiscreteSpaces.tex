@@ -1,0 +1,89 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TheOnlyCompactMetricSpacesThatAdmitAPositivelyExpansiveHomeomorphismAreDiscreteSpaces}
+\pmcreated{2013-03-22 13:55:11}
+\pmmodified{2013-03-22 13:55:11}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{the only compact metric spaces that admit a positively expansive homeomorphism are discrete spaces}
+\pmrecord{10}{34677}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B99}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\F}{F}
+\newcommand{\diam}{\operatorname{diam}}
+\begin{document}
+\PMlinkescapeword{lemma}
+\textbf{Theorem.} Let $(X,d)$ be a compact metric space. If there exists a
+positively expansive homeomorphism $f\colon X\to X$, then $X$ consists only of isolated
+points, i.e. $X$ is finite.
+
+\textbf{Lemma 1.} If $(X,d)$ is a compact metric space and there is an expansive homeomorphism $f\colon X\to X$ such that every point is Lyapunov stable, then every point is asymptotically stable.
+
+\textbf{Proof.}  Let $2c$ be the expansivity constant of $f$.
+Suppose some point $x$ is not asymptotically stable, and let $\delta$ be such
+that $d(x,y)<\delta$ implies $d(f^n(x),f^n(y))<c$ for all $n\in \N$. Then there exist $\epsilon>0$, a point $y$ with $d(x,y)<\delta$, and an increasing sequence $\{n_k\}$ such that $d(f^{n_k}(y),f^{n_k}(x))>\epsilon$ for each $k$
+By uniform expansivity, there is $N>0$ such that for every $u$ and $v$ such that $d(u,v)>\epsilon$ there is $n\in \Z$ with $|n|<N$ such that $d(f^n(x),f^n(y))>c$.  
+Choose $k$ so large that $n_k>N$. Then there is $n$ with $|n|<N$ such that $d(f^{n+n_k}(x),f^{n+n_k}(y))=d(f^n(f^{n_k}(x)),f^n(f^{n_k}(y))) > c$. But since $n+n_k>0$, this contradicts the choce of $\delta$. Hence every point is asymptotically stable.
+
+\textbf{Lemma 2} If $(X,d)$ is a compact metric space and $f\colon X\to X$ is a homeomorphism such that every point is asymptotically stable and Lyapunov stable, then $X$ is finite.
+
+\textbf{Proof.} 
+For each $x\in X$ let $K_x$ be a closed neighborhood of $x$ such that for all $y\in K_x$ we have $\lim_{n\to\infty} d(f^n(x),f^n(y)) = 0$. We assert that $\lim_{n\to\infty}\diam(f^n(K_x))=0$. In fact,
+if that is not the case, then there is an increasing sequence of positive integers $\{n_k\}$, some $\epsilon>0$ and a sequence $\{x_k\}$ of points of $K_x$ such that $d(f^{n_k}(x),f^{n_k}(x_k))>\epsilon$, and there is a subsequence $\{x_{k_i}\}$ converging to some point $y\in K_x$. 
+
+From the Lyapunov stability of $y$, we can find $\delta>0$ such that if $d(y,z)<\delta$, then $d(f^n(y),f^n(z))<\epsilon/2$ for all $n>0$. In particular $d(f^{n_{k_i}}(x_{k_i}),f^{n_{k_i}}(y))<\epsilon/2$ if $i$ is large enough. But also $d(f^{n_{k_i}}(y), f^{n_{k_i}}(x))<\epsilon/2$ if $i$ is large enough, because $y\in K_x$. Thus, for large $i$, we have $d(f^{n_{k_i}}(x_{k_i}),f^{n_{k_i}}(x))<\epsilon$. That is a contradiction from our previous claim.
+
+Now since $X$ is compact, there are finitely many points $x_1,\dots,x_m$ such that $X=\bigcup_{i=1}^m K_{x_i}$,
+so that $X=f^n(X)=\bigcup_{i=1}^m f^n(K_{x_i})$. To show that $X=\{x_1,\dots,x_m\}$, suppose there is $y\in X$ such that $r=\min\{d(y,x_i):1\leq i\leq m\}>0$. Then there is $n$ such that $\diam(f^n(K_{x_i}))<r$ for $1\leq i\leq m$
+but since $y\in f^n(K_{x_i})$ for some $i$, we have a contradiction.
+
+\textbf{Proof of the theorem.}
+ Consider the sets $K_\epsilon = \{(x,y)\in X\times X : d(x,y)\geq \epsilon\}$ for $\epsilon>0$ and $U=\{(x,y)\in X\times X : d(x,y)>c\}$, where $2c$ is the expansivity constant of $f$, and let $\F\colon X\times X\to X\times X$ be the mapping given by $\F(x,y)=(f(x),f(y))$. It is clear that $\F$ is a homeomorphism.
+By uniform expansivity, we know that for each $\epsilon>0$ there is $N_\epsilon$ such that for all $(x,y)\in K_\epsilon$, there is $n\in\{1,\dots,N_\epsilon\}$ such that $\F^n(x,y)\in U$.
+
+We will prove that for each $\epsilon>0$, there is $\delta>0$ such that
+$F^n(K_\epsilon)\subset K_\delta$ for all $n\in \N$. This is equivalent to say that every point of $X$ is Lyapunov stable for $f^{-1}$, and by the previous lemmas the proof will be completed.
+
+Let $K=\bigcup_{n=0}^{N_\epsilon} \F^n(K_\epsilon)$, and let $\delta_0=\min\{d(x,y): (x,y)\in K\}$.
+Since $K$ is compact, the minimum distance $\delta_0$ is reached at some point of $K$; i.e. there exist $(x,y)\in K_\epsilon$ and
+$0\leq n\leq N_\epsilon$ such that $d(f^n(x),f^n(y))=\delta_0$.
+Since $f$ is injective, it follows that $\delta_0>0$ and letting
+$\delta = \delta_0/2$ we have $K\subset K_\delta$.
+
+Given $\alpha\in K-K_\epsilon$, there is $\beta\in K_\epsilon$ and some $0<m\leq N_\epsilon$ such that $\alpha=\F^m(\beta)$, and $\F^k(\beta)\notin K_\epsilon$ for $0<k\leq m$.
+Also, there is $n$ with $0<m<n\leq N_\epsilon$ such that $\F^n(\beta)\in U\subset K_\epsilon$. Hence $m<N_\epsilon$,
+and $\F(\beta)=\F^{m+1}(\alpha)\in \F^{m+1}(K_\epsilon)\subset K$; On the other hand, $\F(K_\epsilon)\subset K$. Therefore $F(K)\subset K$, and inductively $\F^n(K)\subset K$ for any $n\in \N$. It follows
+that $\F^n(K_\epsilon)\subset F^n(K)\subset K \subset K_\delta$ for each $n\in \N$ as required.
+%%%%%
+%%%%%
+\end{document}

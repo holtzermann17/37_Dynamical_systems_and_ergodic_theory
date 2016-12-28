@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HomoclinicClass}
+\pmcreated{2013-03-22 14:07:30}
+\pmmodified{2013-03-22 14:07:30}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{homoclinic class}
+\pmrecord{6}{35532}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37C29}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $M$ be a compact smooth manifold and $f\colon M\to M$ a diffeomorphism. The \emph{homoclinic class} of a hyperbolic periodic point $p$ of $f$, denoted $H(p,f)$, is the closure of the set of transverse intersections between the stable and unstable manifolds all points in the orbit of $p$; i.e.
+$$H(p,f)=\operatorname{cl}\left(\bigcup_{n\in \N} W^s(p)\pitchfork \bigcup_{n\in \Z} W^u(p)\right).$$
+Homoclinic classes are topologically transitive, and the number of homoclinic classes is at most countable. Moreover, generically (in the $\mathcal{C}^1$ topology of $\operatorname{Diff}(M)$), they are pairwise disjoint and maximally transitive.
+%%%%%
+%%%%%
+\end{document}

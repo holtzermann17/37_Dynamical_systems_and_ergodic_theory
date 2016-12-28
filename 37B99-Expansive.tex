@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Expansive}
+\pmcreated{2013-03-22 13:47:48}
+\pmmodified{2013-03-22 13:47:48}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{expansive}
+\pmrecord{14}{34513}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B99}
+\pmdefines{expansivity}
+\pmdefines{positively expansive}
+\pmdefines{forward expansive}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+If $(X,d)$ is a metric space, a homeomorphism $f\colon X\to X$ is said to be \textbf{expansive} if there is a constant $\varepsilon_0>0$, called the \textbf{expansivity constant}, such that for any two points of $X$, their $n$-th iterates are at least $\varepsilon_0$ apart for some integer $n$; i.e. if for any pair of points $x\neq y$ in $X$ there is $n\in \Z$ such that $d(f^n(x),f^n(y))\geq \varepsilon_0$.  
+
+The space $X$ is often assumed to be compact, since under that assumption expansivity is a topological property; i.e. any map which is topologically conjugate to $f$ is expansive if $f$ is expansive (possibly with a different expansivity constant).
+
+If $f\colon X\to X$ is a continuous map, we say that $X$ is \textbf{positively expansive} (or forward expansive) if there is $\varepsilon_0$ such that, for any $x\neq y$ in $X$, there is $n\in \N$ such that $d(f^n(x),f^n(y))\geq \varepsilon_0$. 
+
+\textbf{Remarks.} The latter condition is much stronger than expansivity. In fact, one can prove that if $X$ is compact and $f$ is a positively expansive homeomorphism, then $X$ is finite (\PMlinkname{proof}{OnlyCompactMetricSpacesThatAdmitAPostivelyExpansiveHomeomorphismAreDiscreteSpaces}).
+%%%%%
+%%%%%
+\end{document}

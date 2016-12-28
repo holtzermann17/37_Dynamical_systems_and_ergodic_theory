@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{omegalimitSet}
+\pmcreated{2013-03-22 13:39:37}
+\pmmodified{2013-03-22 13:39:37}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{$\omega$-limit set}
+\pmrecord{6}{34316}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B99}
+\pmsynonym{omega-limit set}{omegalimitSet}
+\pmrelated{NonwanderingSet}
+\pmdefines{$\alpha$-limit}
+\pmdefines{alpha-limit}
+\pmdefines{$\omega$-limit}
+\pmdefines{omega-limit}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+Let $X$ be a metric space, and let $f:X\rightarrow X$ be a homeomorphism. 
+The \emph{$\omega$-limit set} of $x\in X$, denoted by $\omega(x,f)$, is the set of cluster points of the forward orbit $\{f^n(x)\}_{n\in \N}$. 
+Hence, $y\in \omega(x,f)$ if and only if there is a strictly increasing sequence of natural numbers $\{n_k\}_{k\in \N}$ such that $f^{n_k}(x)\rightarrow y$ as $k\rightarrow\infty$.
+
+Another way to express this is
+$$\omega(x,f) = \bigcap_{n\in \N} \overline{\{f^k(x): k>n\}}.$$
+
+The \emph{$\alpha$-limit set} is defined in a similar fashion, but for the backward orbit; i.e. $\alpha(x,f)=\omega(x,f^{-1})$.
+
+Both sets are $f$-invariant, and if $X$ is compact, they are compact and nonempty.
+
+If $\varphi:\R\times X\to X$ is a continuous flow, the definition is similar:
+$\omega(x,\varphi)$ consists of those elements $y$ of $X$ for which there exists a strictly increasing sequnece $\{t_n\}$ of real numbers such that $t_n\rightarrow \infty$ and $\varphi(x,t_n) \rightarrow y$ as $n\rightarrow\infty$.
+Similarly, $\alpha(x,\varphi)$ is the $\omega$-limit set of the reversed flow (i.e. $\psi(x,t) = \phi(x,-t)$).
+Again, these sets are invariant and if $X$ is compact they are compact and nonempty. Furthermore,
+$$\omega(x,f) = \bigcap_{n\in \N}\overline{\{\varphi(x,t):t>n\}}.$$
+%%%%%
+%%%%%
+\end{document}

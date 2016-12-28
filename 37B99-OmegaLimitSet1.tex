@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OmegaLimitSet}
+\pmcreated{2013-03-22 13:18:42}
+\pmmodified{2013-03-22 13:18:42}
+\pmowner{mathcam}{2727}
+\pmmodifier{mathcam}{2727}
+\pmtitle{omega limit set}
+\pmrecord{5}{33818}
+\pmprivacy{1}
+\pmauthor{mathcam}{2727}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B99}
+\pmclassification{msc}{34C05}
+\pmsynonym{$\omega$-limit set}{OmegaLimitSet}
+\pmsynonym{$\alpha$-limit set}{OmegaLimitSet}
+\pmrelated{LimitCycle}
+\pmdefines{alpha limit set}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\Phi(t,x)$ be the flow of the differential equation $x'=f(x)$, where $f\in C^k(M,\mathbb{R}^n)$, with $k\geq 1$ and $M$ an open subset of $\mathbb{R}^n$.
+Consider $x\in M$. 
+
+The omega limit set of $x$, denoted $\omega(x)$, is the set of points $y\in M$ such that there exists a sequence $t_n\to\infty$ with $\Phi(t_n,x)=y$.
+
+Similarly, the alpha limit set of $x$, denoted $\alpha(x)$, is the set of points $y\in M$ such that there exists a sequence $t_n\to-\infty$ with $\Phi(t_n,x)=y$.
+
+Note that the definition is the same for more general dynamical systems.
+%%%%%
+%%%%%
+\end{document}

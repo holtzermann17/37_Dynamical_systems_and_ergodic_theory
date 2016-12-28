@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AxiomA}
+\pmcreated{2013-03-22 13:40:27}
+\pmmodified{2013-03-22 13:40:27}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Axiom A}
+\pmrecord{7}{34340}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37D20}
+\pmsynonym{hyperbolic diffeomorphism}{AxiomA}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+\PMlinkescapeword{satisfies}
+Let $M$ be a smooth manifold. We say that a diffeomorphism $f\colon M\to M$ satisfies
+(Smale's) \emph{Axiom A} (or that $f$ is an Axiom A diffeomorphism) if
+\begin{enumerate}
+\item the nonwandering set $\Omega(f)$ has a hyperbolic structure;
+\item the set of periodic points of $f$ is dense in $\Omega(f)$: $\overline{\Per(f)} = \Omega(f)$.
+\end{enumerate}
+Sometimes, Axiom A diffeomorphisms are called hyperbolic diffeomorphisms, because the portion of $M$ where the ``interesting'' dynamics occur (namely, $\Omega(f)$) has a hyperbolic behaviour.
+%%%%%
+%%%%%
+\end{document}

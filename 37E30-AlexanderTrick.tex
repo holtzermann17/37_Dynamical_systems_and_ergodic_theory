@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{AlexanderTrick}
+\pmcreated{2013-03-22 15:53:38}
+\pmmodified{2013-03-22 15:53:38}
+\pmowner{juanman}{12619}
+\pmmodifier{juanman}{12619}
+\pmtitle{Alexander trick}
+\pmrecord{7}{37895}
+\pmprivacy{1}
+\pmauthor{juanman}{12619}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37E30}
+\pmclassification{msc}{57S05}
+%\pmkeywords{map extension}
+\pmrelated{Homeomorphism}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Want to extend a homeomorphism of the circle $S^1$ to the whole disk $D^2$?
+
+Let $f\colon S^1\to S^1$ be a homeomorphism. Then the formula 
+$$F(x)=||x||f(x/||x||)$$
+allows you to define a map $F\colon D^2\to D^2$
+which extends $f$, for if $x\in S^1\subset D^2$ then $||x||=1$ and $F(x)=1\cdot f(x/1)=f(x)$. Clearly this map is continuous, save (maybe) the origin, since this formula is undefined there. Nevertheless this is removable.
+
+To check continuity at the origin use: {\it ``A map $f$ is continuous at a point $p$ if and only if  for each sequence $x_n\to p$, $f(x_n)\to f(p)$''}.
+
+So take a sequence $u_n\in D^2$ such that $u_n\to 0$ (i.e. which tends to the origin). Then $F(u_n)=||u_n||f(u_n/||u_n||)$ and since $f(u_n/||u_n||)\neq 0$, hence $||u_n||\to 0$ implies $F(u_n)\to 0$, that is $F$ is also continuous at the origin. 
+
+The same method works for $f^{-1}$.
+
+In the same vein one can extend homeomorphisms $S^n\to S^n$ to $D^{n+1}\to D^{n+1}$.
+%%%%%
+%%%%%
+\end{document}

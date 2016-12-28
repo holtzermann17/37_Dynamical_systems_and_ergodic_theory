@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Pseudoorbit}
+\pmcreated{2013-03-22 14:07:19}
+\pmmodified{2013-03-22 14:07:19}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{pseudo-orbit}
+\pmrecord{7}{35528}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37C50}
+\pmsynonym{pseudo orbit}{Pseudoorbit}
+\pmsynonym{$\epsilon$-pseudo-orbit}{Pseudoorbit}
+\pmsynonym{$\epsilon$-orbit}{Pseudoorbit}
+\pmsynonym{$\epsilon$-chain}{Pseudoorbit}
+\pmdefines{shadow}
+\pmdefines{shadowing}
+\pmdefines{shadowed}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $(X,d)$ be a metric space, $f\colon X\to X$ a function, and let $\epsilon>0$. An $\epsilon$-pseudo-orbit for $f$ is a sequence $\{x_n:n\in\Z,\, a<n<b\}$, where $-\infty\leq a<b \leq \infty$, such that $d(x_{n+1},f(x_n))<\epsilon$ for all $a<n<b$. A periodic pseudo-orbit is an infinite pseudo-orbit $\{x_n\}$ such that there is some $p$ with $x_{n+p}=x_n$ for all n.
+
+Given $\delta>0$, the pseudo-orbit $\{x_n: a<n<b\}$ is said to be $\delta$-shadowed by the orbit of $x$, if $d(x_n,f^n(x))<\delta$ for all $a<n<b$.
+%%%%%
+%%%%%
+\end{document}

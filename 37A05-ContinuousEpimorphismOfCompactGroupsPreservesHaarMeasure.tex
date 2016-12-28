@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ContinuousEpimorphismOfCompactGroupsPreservesHaarMeasure}
+\pmcreated{2013-03-22 17:59:06}
+\pmmodified{2013-03-22 17:59:06}
+\pmowner{asteroid}{17536}
+\pmmodifier{asteroid}{17536}
+\pmtitle{continuous epimorphism of  compact groups preserves Haar measure}
+\pmrecord{9}{40495}
+\pmprivacy{1}
+\pmauthor{asteroid}{17536}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37A05}
+\pmclassification{msc}{28C10}
+\pmclassification{msc}{22C05}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\PMlinkescapephrase{right}
+\PMlinkescapephrase{preserves}
+
+{\bf Theorem -} Let $G, H$ be compact Hausdorff topological groups. If $\phi:G \longrightarrow H$ is a continuous surjective homomorphism, then $\phi$ is a measure preserving transformation, in the sense that it preserves the normalized Haar measure.
+
+$\,$
+
+{\bf \emph{\PMlinkescapetext{Proof}:}} Let $\mu$ be the Haar measure in $G$ (normalized, i.e. $\mu (G) = 1$). Let $\nu$ be defined for measurable subsets $E$ of $H$ by
+\begin{displaymath}
+\nu(E)=\mu(\phi^{-1}(E))
+\end{displaymath}
+It is easy to see that $\nu$ defines a measure in $H$. Let us now see that $\nu$ is invariant under right translations. For every $s \in G$ and every measurable subset $E \subset H$ we have that
+\begin{align}
+\phi^{-1}(\phi(s)E)=s\phi^{-1}(E)
+\end{align}
+The inclusion $\supseteq$ is obvious. To prove the other inclusion notice that if $z \in \phi^{-1}(\phi(s)E)$ then $\phi(z) = \phi(s)t$ for some $t \in E$. Hence, $\phi(s^{-1}z)=t$, i.e $s^{-1}z \in \phi^{-1}(E)$. It now follows that $z=s(s^{-1}z) \in s\phi^{-1}(E)$.
+
+Thus, equality (1) and the fact that $\mu$ is a Haar measure imply that
+\begin{displaymath}
+\nu(\phi(s)E)= \mu \big(\phi^{-1}(\phi(s)E)\big)=\mu(s\phi^{-1}(E)) = \mu(\phi^{-1}(E)) = \nu(E)
+\end{displaymath}
+
+Since $\phi$ is surjective it follows that $\nu$ is right invariant. It is not difficult to see that $\nu$ is regular, finite on compact sets and $\nu(H) = 1$. Hence, $\nu$ is the normalized Haar measure in $H$ and, by definition, we have that
+\begin{displaymath}
+\nu(E)=\mu(\phi^{-1}(E))
+\end{displaymath}
+Thus, $\phi$ preserves the Haar measure. $\square$
+%%%%%
+%%%%%
+\end{document}

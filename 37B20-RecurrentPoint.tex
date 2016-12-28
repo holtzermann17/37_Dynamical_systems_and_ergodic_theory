@@ -1,0 +1,53 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RecurrentPoint}
+\pmcreated{2013-03-22 14:29:53}
+\pmmodified{2013-03-22 14:29:53}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{recurrent point}
+\pmrecord{10}{36034}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B20}
+\pmrelated{NonwanderingSet}
+\pmdefines{recurrent set}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $X$ be a Hausdorff space and $f\colon X\to X$ a function. A point $x\in X$ is said to be \emph{recurrent} (for $f$) if $x\in \omega(x)$, i.e. if $x$ belongs to its $\omega$-\PMlinkname{limit}{OmegaLimitSet3} set. This means that for each neighborhood $U$ of $x$ there exists $n>0$ such that $f^n(x)\in U$.
+
+The closure of the set of recurrent points of $f$ is often denoted $R(f)$ and is called the \emph{recurrent set} of $f$.
+
+Every recurrent point is a nonwandering point, hence if $f$ is a homeomorphism and $X$ is compact, $R(f)$ is an invariant subset of $\Omega(f)$, which may be a proper subset.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicallyTransitive}
+\pmcreated{2013-03-22 13:41:05}
+\pmmodified{2013-03-22 13:41:05}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{topologically transitive}
+\pmrecord{5}{34354}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B99}
+\pmclassification{msc}{54H20}
+\pmdefines{topologically mixing}
+\pmdefines{topological mixing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+A continuous surjection $f$ on a topological space $X$ to itself 
+is \emph{topologically transitive} if for every
+pair of open sets $U$ and $V$ in $X$ there is an integer $n>0$ 
+such that $f^n(U)\cap V\neq \emptyset$, where $f^n$ denotes the $n$-th iterate of $f$.
+
+If for every pair of open sets $U$ and $V$ there is an integer $N$ such that
+$f^n(U)\cap V\neq \emptyset$ for each $n>N$, we say that $f$ is \emph{topologically mixing}.
+
+If $X$ is a compact metric space, then $f$ is topologically transitive if and only if there exists a point $x\in X$ with a dense orbit, i.e. such that $\mathcal{O}(x,f)=\{f^n(x): n\in \N\}$ is dense in $X$.
+%%%%%
+%%%%%
+\end{document}

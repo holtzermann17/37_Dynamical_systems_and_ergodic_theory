@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TopologicalConjugation}
+\pmcreated{2013-03-22 13:41:02}
+\pmmodified{2013-03-22 13:41:02}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{topological conjugation}
+\pmrecord{14}{34353}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37C15}
+\pmclassification{msc}{37B99}
+\pmdefines{topologically conjugate}
+\pmdefines{topological semiconjugation}
+\pmdefines{topologically semiconjugate}
+\pmdefines{topologically equivalent}
+\pmdefines{topological equivalence}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\renewcommand{\emph}[1]{\textbf{#1}}
+\begin{document}
+Let $X$ and $Y$ be topological spaces, and let $f\colon X\to X$ and $g\colon Y\to Y$
+be continuous functions. We say that $f$ is
+\emph{topologically semiconjugate} to $g$, if there exists a continuous
+surjection $h\colon Y\to X$ such that $fh=hg$. If $h$ is a homeomorphism,
+then we say that $f$ and $g$ are \emph{topologically conjugate}, and we call
+$h$ a \emph{topological conjugation} between $f$ and $g$.
+
+Similarly, a flow $\varphi$ on $X$ is topologically semiconjugate to a flow $\psi$ on $Y$ if there is a continuous surjection $h\colon Y\to X$ such that 
+$\varphi(h(y),t) = h\psi(y,t)$ for each $y\in Y$, $t\in \R$. If $h$ is a homeomorphism then $\psi$ and $\varphi$ are topologically conjugate.
+
+
+\subsection{Remarks}
+
+Topological conjugation defines an equivalence relation in the 
+space of all continuous surjections of a topological space to itself, 
+by declaring $f$ and $g$ to be related if they are topologically 
+conjugate. This equivalence relation is very useful in the theory of
+dynamical systems, since each class contains all functions which 
+share the same dynamics from the topological viewpoint. In fact, orbits 
+of $g$ are mapped to homeomorphic orbits of $f$ through the conjugation.
+Writing $g = h^{-1}fh$ makes this fact evident: $g^n = h^{-1}f^nh$.
+Speaking informally, topological conjugation is a ``change of coordinates'' in the topological sense.
+
+However, the analogous definition for flows is somewhat restrictive. In fact, we are requiring the maps $\varphi(\cdot,t)$ and $\psi(\cdot,t)$ to be topologically conjugate for each $t$, which is requiring more than simply that  orbits of $\varphi$ be mapped to orbits of $\psi$ homeomorphically.
+This motivates the definition of \emph{topological equivalence}, which also partitions the set of all flows in $X$ into classes of flows sharing the same dynamics, again from the topological viewpoint.
+
+We say that $\psi$ and $\varphi$ are \emph{topologically equivalent}, if there is an homeomorphism $h:Y\to X$, mapping orbits of $\psi$ to orbits of $\varphi$ homeomorphically, and preserving orientation of the orbits. This means that:
+\begin{enumerate}
+\item $h(\mathcal{O}(y,\psi)) = \{h(\psi(y,t)): t\in\R\} = \{\varphi(h(y),t):t\in\R\}= \mathcal{O}(h(y),\varphi)$ for each $y\in Y$;
+\item for each $y\in Y$, there is $\delta>0$ such that, if $0<|s|< t < \delta$, and if $s$ is such that $\varphi(h(y),s) = h(\psi(y,t))$, then $s>0$.
+\end{enumerate}
+%%%%%
+%%%%%
+\end{document}

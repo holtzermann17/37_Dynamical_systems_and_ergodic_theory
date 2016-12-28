@@ -1,0 +1,93 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{HyperbolicSet}
+\pmcreated{2013-03-22 13:40:21}
+\pmmodified{2013-03-22 13:40:21}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{hyperbolic set}
+\pmrecord{5}{34338}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37D20}
+\pmsynonym{hyperbolic structure}{HyperbolicSet}
+\pmsynonym{uniformly hyperbolic}{HyperbolicSet}
+\pmrelated{HyperbolicFixedPoint}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\Cdiff}{\mathcal{C}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+Let $M$ be a compact smooth manifold, and let $f:M\to M$ be a diffeomorphism.
+An $f$-invariant subset $\Lambda$ of $M$ is said to be \emph{hyperbolic} (or to have an hyperbolic structure) if there is a splitting of the tangent bundle of $M$ restricted to $\Lambda$ into a (Whitney) sum of two $Df$-invariant subbundles, $E^s$ and $E^u$ such that the restriction of $Df|_{E^s}$ is a contraction and $Df|_{E^u}$ is an expansion. This means that there are constants $0<\lambda<1$ and $c>0$ such that
+\begin{enumerate}
+\item $T_\Lambda M = E^s\oplus E^u$;
+\item $Df(x)E^s_x = E^s_{f(x)}$ and $Df(x)E^u_x = E^u_{f(x)}$ for each $x\in \Lambda$;
+\item $\|Df^nv\| < c\lambda^n\|v\|$ for each $v\in E^s$ and $n> 0$;
+\item $\|Df^{-n}v\| < c\lambda^n \|v\|$ for each $v\in E^u$ and $n>0$.
+\end{enumerate}
+using some Riemannian metric on $M$.
+
+If $\Lambda$ is hyperbolic, then there exists an \emph{adapted} Riemannian metric, i.e. one such that $c=1$.
+
+%\textbf{Remark}: Morse-Smale diffeomorphisms have very good behaviour, so the 
+%dynamics of a Morse-Smale system (i.e. the behaviour of the orbits of 
+%elements of $M$ when $f$ is applied to them) is reasonably easy to describe. 
+%Since the nonwandering set of such a diffeomorphism consists only of periodic 
+%points (and finitely many of them), every other orbit converges to one of 
+%those periodic orbits. The notion of hyperbolic sets allow us to (somehow) 
+%generalize these ideas for a much wider class of diffeomorphisms (namely, 
+%those satisfying Axiom A) by means Smale's spectral decomposition theorem.
+
+% Furthermore: the stable manifold theorem for hyperbolic sets says that
+% the local stable and unstable manifold of a point in a hyperbolic set are 
+% always $\Cdiff^r$-embedded disks, and the (global) stable and unstable 
+% manifolds are (injectively) $C^k$-immersed disks in $M$. 
+%Also, if $\Lambda$ 
+% has local product structure (or, equivalently, if it is locally maximal), the
+% stable (likewise unstable) manifolds form a foliation of $M$.
+% Some other notions from the fixed point theory can be generalized as well.
+
+%The standard reference for this topic is \cite{Smale}; but it is covered in 
+%many differentiable dynamical systems books, for example \cite{Shub}.
+
+%\begin{thebibliography}{9}
+
+%\bibitem{Shub}
+%Shub, M. 
+%\emph{Global Stability of Dynamical Systems}, New York, Springer-Verlag, 1987. 
+
+%\bibitem{Smale}
+%Smale, S.
+%\emph{Differnetiable dynamical systems},
+%Bull. Amer. Math. Soc. \textbf{73} (1967), 747-817.
+%\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

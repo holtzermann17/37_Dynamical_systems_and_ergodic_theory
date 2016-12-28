@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{SharkovskiisTheorem}
+\pmcreated{2013-03-22 13:16:11}
+\pmmodified{2013-03-22 13:16:11}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{Sharkovskii's theorem}
+\pmrecord{7}{33751}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37E05}
+\pmsynonym{Sharkovsky's theorem}{SharkovskiisTheorem}
+\pmdefines{Sharkovskii's ordering}
+\pmdefines{Sharkovsky's theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Every natural number can be written as $2^rp$, where $p$ is odd, and $r$ is the maximum exponent such that $2^r$ \PMlinkname{divides}{Divisibility} the given number. We define the \emph{Sharkovskii ordering} of the natural numbers in this way: given two odd numbers $p$ and $q$, and two nonnegative integers $r$ and $s$, 
+then $2^rp\succ 2^sq$ if
+\begin{enumerate}
+\item $r<s$ and $p>1$;
+\item $r=s$ and $p<q$;
+\item $r>s$ and $p=q=1$.
+\end{enumerate}
+This defines a linear ordering of $\mathbb{N}$, in which we first have $3,5,7,\dots$, followed by $2\cdot 3$, $2\cdot 5,\dots$, 
+followed by $2^2\cdot 3$, $2^2\cdot 5,\dots$,
+and so on, and finally $2^{n+1},2^n,\dots,2,1$. So it looks like this:
+\[3\succ 5 \succ\cdots\succ 3\cdot 2\succ 5\cdot2\succ\cdots\succ 
+3\cdot2^n\succ 5\cdot 2^n \succ\cdots\succ 2^2\succ 2\succ 1.\]
+
+\textbf{Sharkovskii's theorem.} Let $I\subset \mathbb{R}$ be an interval, and let $f:I\rightarrow \mathbb{R}$ be a continuous function. If $f$ has a periodic point of least period $n$, then $f$ has a periodic point of least period $k$, for each $k$ such that $n\succ k$.
+%%%%%
+%%%%%
+\end{document}

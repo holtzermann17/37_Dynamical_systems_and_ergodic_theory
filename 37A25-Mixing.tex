@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Mixing}
+\pmcreated{2013-03-22 14:06:34}
+\pmmodified{2013-03-22 14:06:34}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{mixing}
+\pmrecord{6}{35511}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37A25}
+\pmdefines{strongly mixing}
+\pmdefines{strong mixing}
+\pmdefines{strong-mixing}
+\pmdefines{weak-mixing}
+\pmdefines{weakly mixing}
+\pmdefines{weak mixing}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $f$ be a measure-preserving transformation of a probability space $(X,\mathscr{A},\mu)$. We say that $f$ is \emph{mixing} (or strong-mixing) if for all $A,B\in\mathscr{A}$, 
+$$\lim_{n\to\infty} \mu(f^{-n}(A)\cap B) = \mu(A)\mu(B),$$
+and $f$ is \emph{weakly mixing} if 
+$$\lim_{n\to\infty} \frac{1}{n}\sum_{i=0}^{n-1}|\mu(f^{-i}(A)\cap B)-\mu(A)\mu(B)| = 0$$
+for all $A,B\in\mathscr{A}$.
+
+Every mixing transformation is weakly mixing, and every weakly mixing transformation is ergodic.
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Flow1}
+\pmcreated{2013-03-22 13:12:34}
+\pmmodified{2013-03-22 13:12:34}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{flow}
+\pmrecord{8}{33673}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37C10}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+A \emph{flow} on a set $X$ is a group action of $(\mathbb{R},+)$ on $X$.
+
+More explicitly, a flow is a function 
+$\varphi:X\times \mathbb{R}\rightarrow X$
+satisfying the following properties:
+\begin{enumerate}
+\item $\varphi(x,0) = x$ 
+\item $\varphi(\varphi(x,t),s) = \varphi(x,s+t)$
+\end{enumerate}
+for all $s,t$ in $\mathbb{R}$ and $x\in X$.
+
+The set $\mathcal{O}(x,\varphi) = \{\varphi(x,t):t\in\mathbb{R}\}$ is called the orbit of $x$ by $\varphi$.
+
+Flows are usually required to be continuous or \PMlinkescapetext{even}  differentiable, when the space $X$ has some additional structure (e.g. when $X$ is a topological space or when $X = \mathbb{R}^n$.)
+
+The most common examples of flows arise from describing the solutions of the autonomous ordinary differential equation 
+\begin{equation}\label{eq1} y' = f(y),\;\;\; y(0)=x \end{equation}
+as a function of the initial condition $x$, when the equation has existence and uniqueness of solutions.
+That is, if (\ref{eq1}) has a unique solution $\psi_x:\mathbb{R}\rightarrow X$ for each $x\in X$, then $\varphi(x,t) = \psi_x(t)$ defines a flow.
+%%%%%
+%%%%%
+\end{document}

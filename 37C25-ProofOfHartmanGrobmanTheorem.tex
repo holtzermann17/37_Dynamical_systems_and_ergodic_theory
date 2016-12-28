@@ -1,0 +1,192 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfHartmanGrobmanTheorem}
+\pmcreated{2013-03-22 14:25:29}
+\pmmodified{2013-03-22 14:25:29}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{proof of Hartman-Grobman theorem}
+\pmrecord{7}{35933}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37C25}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\lip}{\operatorname{Lip}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\renewcommand{\phi}{\varphi}
+\renewcommand{\epsilon}{\varepsilon}
+\begin{document}
+\begin{lemma}
+Let $A\colon E\to E$ be an hyperbolic isomorphism, and let $\phi$ and $\psi$
+be $\epsilon$-Lipschitz maps from $E$ to itself such that $\phi(0)=\psi(0)=0$.
+If $\epsilon$ is sufficiently small, then $A+\phi$ and $A+\psi$ are topologically conjugate.
+\end{lemma}
+
+Since $A$ is hyperbolic, we have $E=E^s \oplus E^u$ and there is $\lambda < 1$
+(possibly changing the norm of $E$ by an equivalent box-type one), called the skewness of $A$,
+ such that $$\|A|_{E^s}\|<\lambda, \quad \|A^{-1}|_{E^u}\|<\lambda$$ and
+$$\|x\| = \max\{\|x_s\|,\|x_u\|\}.$$
+
+Let us denote by $(\tilde E,\|\cdot\|_0)$ the Banach space of all bounded, continuous maps from $E$
+to itself, with the norm of the supremum induced by the norm of $E$.
+The operator $A$ induces a linear operator $\tilde A:\tilde E\to \tilde E$ defined by
+$(\tilde Au)(x) = A(u(x))$, which is also hyperbolic. In fact, letting
+$\tilde E^i$ be the set of all maps $u\colon \tilde E\to \tilde E$ whose range is contained
+in $E^i$ (for $i= s,\,u$) we have that $\tilde E = \tilde E^s\oplus \tilde E^u$ is a hyperbolic splitting
+for $\tilde A$ with the same skewness as $A$.
+
+From now on we denote the projection of $x$ to $E^i$ by $x_i$, and
+the restriction $A|_{E_i}\colon E^i\to E^i$ by $A_i$ ($i=s,\,u$).
+
+We will try to find a conjugation of the form $I+u$ where $u\in \tilde E$.
+
+\begin{proposition} There exists $\epsilon>0$ such that if $\phi$ and $\psi$ are $\epsilon$-Lipschitz,
+then there is a unique $u\in \tilde E$ such that
+$$(I+u)(A+\phi) = (A+\psi)(I+u).$$
+\end{proposition}
+\begin{proof}
+We want to find $u$ such that
+$$A+\phi + u(A+\phi) = A + Au + \psi(I+u)$$
+which is the same as
+$$\phi + u(A+\phi) = Au + \psi(I+u).$$
+This can be rewriten as
+\begin{align*}
+u_u &=  A_u^{-1}(u_u(A+\phi) + \phi_u - \psi_u(I+u))\\
+u_s &= (A_su_s + \psi_s(I+u) - \phi_s)(A+\phi)^{-1},
+\end{align*}
+where we use the fact that by the Lipschitz inverse mapping theorem, if $\lip(\phi)<1/\lambda \leq \|A^{-1}\|^{-1}$
+(where $\lambda$ is the skewness of $A$) then $A+\phi$ is invertible with Lipschitz inverse.
+
+Now define $\Gamma:\tilde E\to \tilde E$ by
+\begin{align*}
+\Gamma_s(u) &= ( A_su_s + \psi_s(I+u) - \phi_s)(A+\phi)^{-1} \\
+\Gamma_u(u) &= A_u^{-1}(u_u(A+\phi) + \phi_u - \psi_u(I+u))
+\end{align*}
+
+We assert that, if $\epsilon$ is small, $\Gamma$ is a contraction.
+In fact,
+
+\begin{align*}
+\left\|\Gamma_s(u) - \Gamma_s(v)\right\|_0 &= \left\|\left(A_s(u_s-v_s) + \psi_s(I+u) -
+\psi_s(I+v)\right)(A+\phi)^{-1}\right\|_0 \\
+&\leq \|\tilde A_s\|\cdot\|(u_s-v_s)(A+\phi)^{-1}\|_0 + \|(\psi_s(I+u) -
+\psi_s(I+v))(A+\phi)^{-1}\|_0 \\
+&\leq \lambda\|u_s-v_s\|_0 + \epsilon\|u-v\|_0\\
+&\leq (\lambda+\epsilon) \|u-v\|_0
+\end{align*}
+and
+\begin{align*}
+\|\Gamma_u(u)-\Gamma_u(v)\|_0 &= \left\|A_u^{-1}(u_u(A+\phi) - v_u(A+\phi) - \psi_u(I+u) +
+\psi_u(I+v))\right\|_0 \\
+        &\leq \|\tilde A_u^{-1}\|\cdot\left( \|u_u(A+\phi)-v_u(A+\phi)\|_0 +
+        \|\psi_u(I+u) - \psi_u(I+v)\|_0\right) \\
+        &\leq \lambda \left( \|u_u - v_u\|_0 + \epsilon \|u - v\|_0 \right)\\
+        &\leq \lambda(1 + \epsilon)\|u-v\|_0.
+\end{align*}
+Thus, if $\epsilon < \epsilon_0 \doteq \min\{\lambda, (1-\lambda)/\lambda\}$, $\Gamma$ has Lipschitz constant
+smaller than $1$, so it is a contraction. Hence $u$ exists and is unique.
+\end{proof}
+
+\begin{proposition} The map $u$ from the previous proposition is a homeomorphism.
+\end{proposition}
+\begin{proof} Using the previous proposition with $\phi$ and $\psi$ switched, we get a unique
+$v\in \tilde E$ such that
+$$(I+v)(A+\psi) = (A+\phi)(I+v).$$
+It follows that
+\begin{equation}\label{eq1}
+(I+v)(I+u)(A+\phi) = (I+v)(A+\psi)(I+u) = (A+\phi)(I+v)(I+u).
+\end{equation}
+Also, the previous proposition with $\phi = \psi$ implies that
+that there is a unique $w\in\tilde E$ such that
+$$(I+w)(A+\phi) = (A+\phi)(I+w),$$
+which obviously is $w=0$. But since $(I+v)(I+u) = I+(u+v+uv)$ and $u+v+uv\in \tilde E$,
+(\ref{eq1}) implies that $w=u+v+uv$ is a solution of the above equation, so that $u+v+uv = 0$ and $(I+v)(I+u) = I$. In a similar way, we see that $(I+u)(I+v)=I$. Hence $I+u$ is invertible, with continuous inverse.
+\end{proof}
+
+The two previous propositions prove the lemma.
+
+\begin{proposition} If $U$ is an open neighborhood of $0$ and $f\colon U\to E$
+is a $\mathcal{C^1}$ map with $f(0)=0$, then for every $\epsilon>0$ there is $\delta>0$ such that
+$\phi\doteq f-Df(0)$ is $\epsilon$-Lipschitz in the ball $B(0,\delta)$.
+\end{proposition}
+\begin{proof} This is a direct consequence of the mean value inequality and the
+fact that $D\phi$ is continuous and $D\phi(0)=0$.
+\end{proof}
+
+\begin{proposition} There is a constant $k$ such that if $\phi\colon \overline B(0,r)\to E$ is an $\epsilon$-Lipschitz map, then 
+there is a $k\epsilon$-Lipschitz map $\tilde \phi\colon E\to E$
+which coincides with $\phi$ in $B(0,r/2)$.
+\end{proposition}
+\begin{proof}
+Let $\eta\colon \R \to \R$ be a $\mathcal{C}^\infty$ bump function: an infinitely
+differentiable  map such that
+$\eta(x) = 1$ for $x<1/2$ and $\eta(x) = 0$ for $x>1$, with derivative bounded by $M$ and $|\eta(x)\|\leq 1$ for all $x\in \R$.
+Now define $\tilde \phi(x) = \phi(x)\eta(\|x\|/r)$ (when $\phi(x)$ is not
+defined, we assume that it is zero).
+If $x$ and $y$ are both in $B(0,r)$ then we have
+\begin{align*}
+\|\tilde\phi(x)-\tilde\phi(y)\| &= \big\|\phi(x)\eta(\|x\|/r) -
+\phi(y)\eta(\|y\|/r)\big\| \\
+&\leq \big\|(\phi(x)-\phi(y))\eta(\|x\|/r)\big\| +
+\big\|\phi(y)(\eta(\|x\|/r)-\eta(\|y\|/r))\big\|\\
+&\leq \epsilon\|x-y\| +
+\|\phi(y)-\phi(0)\|\cdot\big\|\eta(\|x\|/r)-\eta(\|y\|/r)\big\|\\
+&\leq \epsilon\|x-y\| + \epsilon\|y\|(M\|x-y\|/r)\\
+&\leq (M+1)\epsilon\|x-y\|;
+\end{align*}
+if $x$ is in $B(0,r)$ and $y$ is not, then
+$$\|\tilde\phi(x)-\tilde\phi(y)\| = \|\tilde\phi(x) - \tilde\phi(y^*)\|,$$
+where $y^*$ is defined as $x+\tau(y-x)$ with
+$$\tau = \sup\{t: x+t(y-x)\in E\setminus B(0,r)\}$$
+This is true because $\tilde\phi(y^*)=0$. Also, $\|x-y^*\| = \tau\|x - y\|
+\leq \|x-y\|$; hence
+$$\|\tilde\phi(x)-\tilde\phi(y)\| = \|\tilde\phi(x) - \tilde\phi(y^*)\|\leq
+(M+1)\epsilon\|x-y^*\| \leq (M+1)\epsilon\|x-y\|.$$
+Finally, if both $x$ and $y$ are outside $B(0,r)$, then
+$\|\tilde\phi(x)-\tilde\phi(y)\| = 0 \leq (M+1)\|x-y\|$. Letting $k=M+1$ we
+get the desired result.
+\end{proof}
+
+\textbf{Proof of the theorem.}
+Taking the particular $\psi = 0$ in the lemma, we observe that
+there is $\epsilon>0$ such that for any $\epsilon$-Lipschitz map $\phi$,
+$Df(0)$ is conjugate to $\phi + Df(0)$.
+ Choose $\delta$ such that $f-Df(0)$ is $\epsilon/k$-Lipschitz in $B(0,2\delta)$.
+Let $\tilde\phi$ be the $\epsilon$-Lipschitz extension of $f-Df(0)$ to
+$B(0,\delta)$ obtained from the previous proposition. We have that
+$Df(0)+\tilde\phi$ is conjugate to $Df(0)$. But for $x\in B(0,\delta)$ we have
+$Df(0)+\tilde\phi = f$, so that $f$ is locally conjugate to $Df(0)$.
+\end{document}
+%%%%%
+%%%%%
+\end{document}

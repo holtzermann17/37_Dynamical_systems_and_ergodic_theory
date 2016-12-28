@@ -1,0 +1,183 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{Preinjectivity}
+\pmcreated{2013-03-22 19:22:04}
+\pmmodified{2013-03-22 19:22:04}
+\pmowner{Ziosilvio}{18733}
+\pmmodifier{Ziosilvio}{18733}
+\pmtitle{pre-injectivity}
+\pmrecord{4}{42321}
+\pmprivacy{1}
+\pmauthor{Ziosilvio}{18733}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B15}
+\pmclassification{msc}{68Q80}
+\pmdefines{mutually erasable patterns (cellular automaton)}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+\newcommand{\Acal}{\ensuremath{\mathcal{A}}}
+\newcommand{\goe}{\mathbb{GoE}}
+\newcommand{\ie}{\textit{i.e.}}
+\newcommand{\Neigh}{\ensuremath{\mathcal{N}}}
+\newcommand{\restrict}[2]{\ensuremath{\left.{#1}\right|_{#2}}}
+
+\newtheorem{lemma}{Lemma}
+
+Let $X = \prod_{i \in I} X_i$ be a Cartesian product.
+Call two elements $x,y \in X$ \emph{almost equal}
+if the set $\Delta(x,y) = \{i \in I \mid x_i \neq y_i\}$ is finite.
+A function $f : X \to X$ is said to be \emph{pre-injective}
+if it sends distinct almost equal elements into distinct elements,
+\ie, if $0 < |\Delta(x,y)| < \infty$ implies $f(x) \not= f(y)$.
+
+If $X$ is finite, pre-injectivity is the same as injectivity;
+in general, the latter implies the former, but not the other way around.
+Moreover, it is not true in general
+that a composition of pre-injective functions
+is itself pre-injective.
+
+A cellular automaton is said to be pre-injective if its global function is.
+As cellular automata send almost equal configurations
+into almost equal configurations,
+the composition of two pre-injective cellular automata is pre-injective.
+
+Pre-injectivity of cellular automata can be characterized
+via mutually erasable patterns.
+Given a finite subset $E$ of $G$,
+two patterns
+\begin{math}
+p_1,p_2 : E \to Q
+\end{math}
+are \emph{mutually erasable} (briefly, m.e.)
+for a cellular automaton
+\begin{math}
+\Acal = \langle Q, \Neigh, f \rangle
+\end{math}
+on $G$
+if for any two configurations
+\begin{math}
+c_1,c_2 : G \to Q
+\end{math}
+such that
+\begin{math}
+\restrict{c_i}{E} = p_i
+\end{math}
+and
+\begin{math}
+\restrict{c_1}{G \setminus E} = \restrict{c_2}{G \setminus E}
+\end{math}
+one has $F_\Acal(c_1) = F_\Acal(c_2)$.
+
+\begin{lemma} \label{lem:me}
+For a cellular automaton
+\begin{math}
+\Acal = \langle Q, \Neigh, f \rangle,
+\end{math}
+the following are equivalent.
+\begin{enumerate}
+\item \label{it:me}
+$\Acal$ has no mutually erasable patterns.
+\item \label{it:ea}
+$\Acal$ is pre-injective.
+\end{enumerate}
+\end{lemma}
+\textit{Proof.}
+It is immediate that the negation of point~\ref{it:me}
+implies the negation of point~\ref{it:ea}.
+So let
+\begin{math}
+c_1,c_2 : G \to Q
+\end{math}
+be two distinct almost equal configurations such that
+\begin{math}
+F_\Acal(c_1) = F_\Acal(c_2):
+\end{math}
+it is not restrictive to suppose that
+$\Neigh$ is symmetric
+(\ie, if $x \in \Neigh$ then $x^{-1} \in \Neigh$)
+and $e$, the identity element of $G$, belongs to $\Neigh$.
+Let $\Delta$ be a finite subset of $G$ such that
+\begin{math}
+\restrict{c_1}{G \setminus \Delta} = \restrict{c_2}{G \setminus \Delta},
+\end{math}
+and let
+\begin{equation}
+E = \Delta \Neigh^2
+  = \{ g \in G
+       \mid \exists z \in \Delta, u,v \in \Neigh
+       \mid g = zuv
+    \} \;:
+\end{equation}
+we shall prove that
+\begin{math}
+p_1 = \restrict{c_1}{E}
+\end{math}
+and
+\begin{math}
+p_2 = \restrict{c_2}{E}
+\end{math}
+are mutually erasable.
+(They surely are distinct, since $\Delta \subseteq E$.)
+
+So let $\gamma_1,\gamma_2 : G \to Q$ satisfy
+\begin{math}
+\restrict{\gamma_i}{E} = p_i
+\end{math}
+and
+\begin{math}
+\restrict{\gamma_2}{G \setminus E} = p_i = \restrict{\gamma_2}{G \setminus E}.
+\end{math}
+Let $z \in G$.
+If $z \in \Delta\Neigh$,
+then $F_\Acal(\gamma_1)(z) = F_\Acal(\gamma_2)(z)$,
+because by construction
+\begin{math}
+\restrict{\gamma_i}{z\Neigh} = \restrict{c_i}{z\Neigh};
+\end{math}
+if
+\begin{math}
+z \in G \setminus \Delta\Neigh,
+\end{math}
+then $F_\Acal(\gamma_1)(z) = F_\Acal(\gamma_2)(z)$ as well,
+because by construction
+\begin{math}
+\restrict{\gamma_1}{z\Neigh} = \restrict{\gamma_2}{z\Neigh}.
+\end{math}
+Since $\gamma_1$ and $\gamma_2$ are arbitrary,
+$p_1$ and $p_2$ are mutually erasable.
+\hfill $\Box$
+
+\begin{thebibliography}{99}
+
+Ceccherini-Silberstein, T. and Coornaert, M. (2010)
+\textit{Cellular Automata and Groups.}
+Springer Verlag.
+
+\end{thebibliography}
+
+%%%%%
+%%%%%
+\end{document}

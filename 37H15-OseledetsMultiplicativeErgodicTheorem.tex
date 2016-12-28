@@ -1,0 +1,58 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{OseledetsMultiplicativeErgodicTheorem}
+\pmcreated{2014-03-26 14:21:35}
+\pmmodified{2014-03-26 14:21:35}
+\pmowner{Filipe}{28191}
+\pmmodifier{Filipe}{28191}
+\pmtitle{Oseledets multiplicative ergodic theorem}
+\pmrecord{6}{88076}
+\pmprivacy{1}
+\pmauthor{Filipe}{28191}
+\pmtype{Theorem}
+\pmclassification{msc}{37H15}
+\pmsynonym{Oseledets decomposition}{OseledetsMultiplicativeErgodicTheorem}
+\pmrelated{Lyapunov exponent}
+\pmrelated{Furstenberg-Kesten Theorem}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% need this for including graphics (\includegraphics)
+\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+
+% making logically defined graphics
+%\usepackage{xypic}
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+
+\begin{document}
+Oseledets multiplicative ergodic theorem, or Oseledets decomposition, considerably extends the results of Furstenberg-Kesten theorem, under the same conditions.
+
+Consider $\mu$ a probability measure, and $f:M\rightarrow M$ a measure preserving dynamical system. Consider $A:M\rightarrow GL(d,\textbf{R})$, a measurable transformation, where GL(d,\textbf{R}) is the space of invertible square matrices of size $d$.
+Consider the multiplicative cocycle $(\phi^n(x))_n$ defined by the transformation $A$, and assume $\log^+||A||$ and $\log^+||A^{-1}||$ are integrable.
+
+Then, $\mu$ almost everywhere $x \in M$, one can find a natural number $k=k(x)$ and real numbers $\lambda_1(x)> \cdots > \lambda_k(x)$ and a filtration
+$$\textbf{R}^d=V_x^1 > \cdots > V_x^k > V_x^{k+1} = \{0\}$$
+such that, for $\mu$ almost everywhere and for all $i \in \{1,\dots, k\}$
+\begin{enumerate}
+\item $k(f(x))=k(x)$ and $\lambda_i(f(x))=\lambda_i(x)$ and $A(x) \cdot V_x^i=V_{f(x)}^i$;
+\item $\lim_n \frac{1}{n} \log ||\phi^n(x)v||=\lambda_i(x)$ for all $v \in V_x^i \backslash V_x^{i+1}$;
+\item $\lim_n \frac{1}{n} \log |\det \phi^n(x)|=\sum_{i=1}^k d_i(x)\lambda_i(x)$ where $d_i(x)=\dim V_x^i-\dim V_x^{i+1}$
+\end{enumerate}
+Furthermore, the numbers $k_i(x)$ and the subspaces $V_x^i$ depend measurably on the point $x$.
+
+The numbers $\lambda_i(x)$ are called \textit{Lyapunov exponents} of $A$ relatively to $f$ at the point $x$. Each number $d_i(x)$ is called the \textit{multiplicity} of the Lyapunov exponent $\lambda_i(x)$. We also have that $\lambda_1=\lambda_{\max}$ and $\lambda_k=\lambda_{\min}$, where $\lambda_{max}$ and $\lambda_{\min}$ are as given by Furstenberg-Kesten theorem.
+\end{document}

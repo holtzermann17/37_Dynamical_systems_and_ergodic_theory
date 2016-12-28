@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{BifurcationProblemWithSymmetryGroup}
+\pmcreated{2013-03-22 13:53:36}
+\pmmodified{2013-03-22 13:53:36}
+\pmowner{Daume}{40}
+\pmmodifier{Daume}{40}
+\pmtitle{bifurcation problem with symmetry group}
+\pmrecord{6}{34639}
+\pmprivacy{1}
+\pmauthor{Daume}{40}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37G40}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic} 
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\begin{document}
+Let $\Gamma$ be a Lie group acting on a vector space $V$ and let the system of ordinary differential equations $$\dot{\mathbf{x}} + g(\mathbf{x},\lambda)=0$$ where $g\colon\mathbb{R}^n \times \mathbb{R} \to \mathbb{R}^n$ is smooth.  Then $g$ is called a \emph{bifurcation problem with symmetry group} $\Gamma$ if $g\in \vec{\mathcal{E}}_{x,\lambda}(\Gamma)$ \textit{(where $\vec{\mathcal{E}}(\Gamma)$ is the space of $\Gamma$-equivariant germs, at the origin, of $C^\infty$ mappings of $V$ into $V$)} satisfying 
+$$g(0,0)=0$$ 
+and 
+$$(dg)_{0,0} = 0$$
+where $(dg)_{0,0}$ denotes the Jacobian Matrix evaluated at $(0,0)$.
+\cite{1}
+\begin{thebibliography}{1}
+\bibitem[GSS]{1} Golubitsky, Martin. Stewart, Ian. Schaeffer, G. David.: Singularities and Groups in Bifurcation Theory \textit{(Volume II)}. Springer-Verlag, New York, 1988.
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

@@ -1,0 +1,78 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{FrobeniusTheorem}
+\pmcreated{2013-03-22 14:52:03}
+\pmmodified{2013-03-22 14:52:03}
+\pmowner{jirka}{4157}
+\pmmodifier{jirka}{4157}
+\pmtitle{Frobenius' theorem}
+\pmrecord{9}{36543}
+\pmprivacy{1}
+\pmauthor{jirka}{4157}
+\pmtype{Theorem}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37C10}
+\pmclassification{msc}{53-00}
+\pmclassification{msc}{53B25}
+\pmrelated{Distribution5}
+\pmrelated{IntegralManifold}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\theoremstyle{theorem}
+\newtheorem*{thm}{Theorem}
+\newtheorem*{lemma}{Lemma}
+\newtheorem*{conj}{Conjecture}
+\newtheorem*{cor}{Corollary}
+\newtheorem*{example}{Example}
+\theoremstyle{definition}
+\newtheorem*{defn}{Definition}
+\begin{document}
+\begin{thm}[Frobenius]
+Let $M$ be a smooth manifold ($C^\infty$) and let $\Delta$ be a
+distribution on $M$.  Then $\Delta$ is completely integrable if and only if
+$\Delta$ is involutive.
+\end{thm}
+
+One direction in the proof is pretty easy since the tangent space
+of an integral manifold is involutive, so sometimes the theorem is only
+stated in one direction, that is:  If $\Delta$ is involutive then it is
+completely integrable.
+
+Another way to \PMlinkescapetext{state} the theorem is that if we have $n$ vector fields $\{X_k\}_{k=1}^n$ on a manifold $M$ such that they are linearly independent at every point of the manifold, and furthermore if for any $k,m$ we have
+$[X_k,X_m] = \sum_{j=1}^n a_j X_j$ for some $C^\infty$ functions $a_j$, then for any point $x \in N$, there exists a germ of a submanifold $N \subset M$, through  $x$, such that $TN$ is spanned
+by $\{X_k\}_{k=1}^n$.  Note that if we extend $N$ to all of $M$, it need not be
+an embedded submanifold anymore, but just an immersed one.
+
+For $n=1$ above, this is just the existence and uniqueness of solution of ordinary differential equations.
+
+\begin{thebibliography}{9}
+\bibitem{boothby}
+William M.\@ Boothby.
+{\em \PMlinkescapetext{An Introduction to Differentiable Manifolds and
+Riemannian Geometry}},
+Academic Press, San Diego, California, 2003.
+\bibitem{wikipedia} Frobenius theorem at Wikipedia: \PMlinkexternal{http://en.wikipedia.org/wiki/Frobenius_theorem}{http://en.wikipedia.org/wiki/Frobenius_theorem}
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}

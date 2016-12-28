@@ -1,0 +1,54 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{NonwanderingSet}
+\pmcreated{2013-03-22 13:39:31}
+\pmmodified{2013-03-22 13:39:31}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{nonwandering set}
+\pmrecord{4}{34314}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Definition}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37B20}
+\pmrelated{OmegaLimitSet3}
+\pmrelated{RecurrentPoint}
+\pmdefines{wandering point}
+\pmdefines{nonwandering point}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\begin{document}
+Let $X$ be a metric space, and $f:X\rightarrow X$ a continuous surjection.
+An element $x$ of $X$ is a \emph{wandering point} if there is a neighborhood $U$ of $x$ and an integer $N$ such that, for all $n\geq N$, $f^n(U)\cap U=\emptyset$. If $x$ is not wandering, we call it a \emph{nonwandering point}. Equivalently, $x$ is a nonwandering point if for every neighborhood $U$
+of $x$ there is $n\geq 1$ such that $f^n(U)\cap U$ is nonempty. The set of all nonwandering points is called the \emph{nonwandering set} of $f$, and is denoted by $\Omega(f)$.
+
+If $X$ is compact, then $\Omega(f)$ is compact, nonempty, and forward invariant; if, additionally, $f$ is an homeomorphism, then $\Omega(f)$ is invariant.
+%%%%%
+%%%%%
+\end{document}

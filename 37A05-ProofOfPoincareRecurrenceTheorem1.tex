@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProofOfPoincareRecurrenceTheorem1}
+\pmcreated{2013-03-22 14:29:56}
+\pmmodified{2013-03-22 14:29:56}
+\pmowner{Koro}{127}
+\pmmodifier{Koro}{127}
+\pmtitle{proof of Poincar\'e recurrence theorem 1}
+\pmrecord{5}{36035}
+\pmprivacy{1}
+\pmauthor{Koro}{127}
+\pmtype{Proof}
+\pmcomment{trigger rebuild}
+\pmclassification{msc}{37A05}
+\pmclassification{msc}{37B20}
+
+% this is the default PlanetMath preamble.  as your knowledge
+% of TeX increases, you will probably want to edit this, but
+% it should be fine as is for beginners.
+
+% almost certainly you want these
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{mathrsfs}
+
+% used for TeXing text within eps files
+%\usepackage{psfrag}
+% need this for including graphics (\includegraphics)
+%\usepackage{graphicx}
+% for neatly defining theorems and propositions
+%\usepackage{amsthm}
+% making logically defined graphics
+%%%\usepackage{xypic}
+
+% there are many more packages, add them here as you need them
+
+% define commands here
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Per}{\operatorname{Per}}
+\begin{document}
+Let $A_n= \cup_{k=n}^\infty f^{-k}E$. Clearly, $E\subset A_0$ and
+$A_i\subset A_j$ when $j\leq i$. Also, $A_i =
+f^{j-i}A_j$, so that $\mu(A_i)=\mu(A_j)$ for all $i,j\geq 0$, by
+the $f$-invariance of $\mu$.
+Now for any $n>0$ we have $E-A_n\subset A_0-A_n$, so that
+$$\mu(E-A_n) \leq \mu(A_0-A_n) = \mu(A_0) - \mu(A_n) = 0.$$
+Hence $\mu(E-A_n)=0$ for all $n>0$, so that
+$\mu(E-\cap_{n=1}^\infty A_n) = \mu(\cup_{n=1}^\infty E-A_n)=0$.
+But $E-\cap_{n=1}^\infty A_n$ is precisely the set of those $x\in E$ such
+that for some $n$ and for all $k>n$ we have $f^k(x)\notin E$. $\Box$
+%%%%%
+%%%%%
+\end{document}
