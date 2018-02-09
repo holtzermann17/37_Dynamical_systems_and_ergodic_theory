@@ -1,0 +1,207 @@
+<!DOCTYPE html><html>
+<head>
+<title>cellular automaton</title>
+<!--Generated on Fri Feb  9 20:45:34 2018 by LaTeXML (version 0.8.2) http://dlmf.nist.gov/LaTeXML/.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/3f71ceeb3b055e1ddc3b6c11fb1f074c/raw/2bb23e3b173ff96840797fc0c3bcb8c54085df8e/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="https://cdn.rawgit.com/holtzermann17/4bda0365b30858ac2fb83623185fe3ec/raw/cedd84ed3e3ad597c5d293f443ecfe4803741c6b/ltx-article.css" type="text/css">
+<script src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">cellular automaton</h1>
+
+<div id="p1" class="ltx_para">
+<br class="ltx_break">
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">A <math id="p2.m1" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>-dimensional <em class="ltx_emph ltx_font_italic">cellular automaton</em>
+is a triple
+<math id="p2.m2" class="ltx_Math" alttext="\mathcal{A}=\langle Q,\mathcal{N},f\rangle" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒜</mi><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>Q</mi><mo>,</mo><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>,</mo><mi>f</mi><mo stretchy="false">⟩</mo></mrow></mrow></math>
+where:</p>
+<ol id="I1" class="ltx_enumerate">
+<li id="I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">1.</span> 
+<div id="I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i1.p1.m1" class="ltx_Math" alttext="Q" display="inline"><mi>Q</mi></math> is a nonempty set, called <em class="ltx_emph ltx_font_italic">alphabet</em> or <em class="ltx_emph ltx_font_italic">set of states</em>.</p>
+</div>
+</li>
+<li id="I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">2.</span> 
+<div id="I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i2.p1.m1" class="ltx_Math" alttext="\mathcal{N}=\{\nu_{1},\ldots,\nu_{|\mathcal{N}|}\}" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>ν</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>ν</mi><mrow><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo stretchy="false">|</mo></mrow></msub><mo stretchy="false">}</mo></mrow></mrow></math>
+is a <em class="ltx_emph ltx_font_italic">finite, nonempty</em> subset of <math id="I1.i2.p1.m2" class="ltx_Math" alttext="\mathbb{Z}^{d}" display="inline"><msup><mi>ℤ</mi><mi>d</mi></msup></math>,
+called <em class="ltx_emph ltx_font_italic">neighborhood index</em>.</p>
+</div>
+</li>
+<li id="I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_enumerate">3.</span> 
+<div id="I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="I1.i3.p1.m1" class="ltx_Math" alttext="f:Q^{\mathcal{N}}\to Q" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>Q</mi><mi class="ltx_font_mathcaligraphic">𝒩</mi></msup><mo>→</mo><mi>Q</mi></mrow></mrow></math> is the <em class="ltx_emph ltx_font_italic">local function</em>.</p>
+</div>
+</li>
+</ol>
+<p class="ltx_p">The local function of the cellular automaton <math id="p2.m3" class="ltx_Math" alttext="\mathcal{A}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒜</mi></math>
+induces, by synchronous application at all points,
+a <em class="ltx_emph ltx_font_italic">global function</em> <math id="p2.m4" class="ltx_Math" alttext="F_{\mathcal{A}}" display="inline"><msub><mi>F</mi><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub></math>
+on <math id="p2.m5" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>-dimensional <em class="ltx_emph ltx_font_italic">configurations</em> <math id="p2.m6" class="ltx_Math" alttext="c:\mathbb{Z}^{d}\to Q" display="inline"><mrow><mi>c</mi><mo>:</mo><mrow><msup><mi>ℤ</mi><mi>d</mi></msup><mo>→</mo><mi>Q</mi></mrow></mrow></math>:</p>
+<table id="S0.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E1.m1" class="ltx_Math" alttext="F_{\mathcal{A}}(c)(z)=f\left(c(z+\nu_{1}),\ldots,c(z+\nu_{|\mathcal{N}|})%
+\right)=f\left(\left.{c}\right|_{z+\mathcal{N}}\right)\;." display="block"><mrow><mrow><mrow><msub><mi>F</mi><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><msub><mi>ν</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>c</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>+</mo><msub><mi>ν</mi><mrow><mo stretchy="false">|</mo><mi class="ltx_font_mathcaligraphic">𝒩</mi><mo stretchy="false">|</mo></mrow></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mrow><mi>c</mi><mo fence="true">|</mo></mrow><mrow><mi>z</mi><mo>+</mo><mi class="ltx_font_mathcaligraphic">𝒩</mi></mrow></msub><mo rspace="5.3pt">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Observe that the global function is continuous in the product topology.</p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Cellular automata are a Turing-complete model of computation.
+In fact, given a Turing machine,
+it is straightforward to construct a cellular automaton
+that emulates it in real time.
+On the other hand,
+given a one-dimensional cellular automaton,
+there exists a Turing machine
+that emulates it in linear time
+with respect to the size of the input.</p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Cellular automata make good tools for <em class="ltx_emph ltx_font_italic">qualitative analysis</em>.
+In fact, given the description of a cellular automaton,
+it is straightforward to write a computer program
+that implements its features.
+Also, several phenomena in different fields of sciences
+— from physics to biology to sociology —
+can be described in terms of finite-range interactions between discrete agents.</p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">On the other hand,
+retrieving the properties of the global dynamics from the local description
+is usually a very difficult task,
+and may depend on the dimension.
+As an example,
+reversibility of the global function
+is decidable in dimension <math id="p5.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> but not in dimension <math id="p5.m2" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math> (or higher).</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">The definition above can be generalized to the case
+of a generic group <math id="p6.m1" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math> acting by <em class="ltx_emph ltx_font_italic">translations</em>
+on the space <math id="p6.m2" class="ltx_Math" alttext="Q^{G}" display="inline"><msup><mi>Q</mi><mi>G</mi></msup></math> of configurations.
+If</p>
+<table id="S0.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E2.m1" class="ltx_Math" alttext="L_{g}(x)=g\cdot x\;\;\forall x\in G\;," display="block"><mrow><mrow><mrow><msub><mi>L</mi><mi>g</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>g</mi><mo>⋅</mo><mpadded width="+5.6pt"><mi>x</mi></mpadded></mrow><mo>⁢</mo><mrow><mo>∀</mo><mi>x</mi></mrow></mrow><mo>∈</mo><mpadded width="+2.8pt"><mi>G</mi></mpadded></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+<p class="ltx_p">then the local function <math id="p6.m3" class="ltx_Math" alttext="f:Q^{\mathcal{N}}\to Q" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>Q</mi><mi class="ltx_font_mathcaligraphic">𝒩</mi></msup><mo>→</mo><mi>Q</mi></mrow></mrow></math>
+(<math id="p6.m4" class="ltx_Math" alttext="\mathcal{N}" display="inline"><mi class="ltx_font_mathcaligraphic">𝒩</mi></math> being a finite nonempty subset of <math id="p6.m5" class="ltx_Math" alttext="G" display="inline"><mi>G</mi></math>)
+induces <math id="p6.m6" class="ltx_Math" alttext="F_{\mathcal{A}}:Q^{G}\to Q^{G}" display="inline"><mrow><msub><mi>F</mi><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mo>:</mo><mrow><msup><mi>Q</mi><mi>G</mi></msup><mo>→</mo><msup><mi>Q</mi><mi>G</mi></msup></mrow></mrow></math>
+via the relation</p>
+<table id="S0.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.E3.m1" class="ltx_Math" alttext="F_{\mathcal{A}}(c)(g)=f\left(\left.{(c\circ L_{g})}\right|_{\mathcal{N}}\right%
+)=f\left(\left.{c}\right|_{g\mathcal{N}}\right)\;\;\forall c:G\to Q\;." display="block"><mrow><mrow><mrow><mrow><msub><mi>F</mi><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>∘</mo><msub><mi>L</mi><mi>g</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo fence="true">|</mo></mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi></msub><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mrow><mi>c</mi><mo fence="true">|</mo></mrow><mrow><mi>g</mi><mo>⁢</mo><mi class="ltx_font_mathcaligraphic">𝒩</mi></mrow></msub><mo rspace="8.1pt">)</mo></mrow><mo>⁢</mo><mrow><mo>∀</mo><mi>c</mi></mrow></mrow></mrow><mo>:</mo><mrow><mi>G</mi><mo>→</mo><mpadded width="+2.8pt"><mi>Q</mi></mpadded></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">Observe that <math id="p6.m7" class="ltx_Math" alttext="L=\{L_{g}\}_{g\in G}" display="inline"><mrow><mi>L</mi><mo>=</mo><msub><mrow><mo stretchy="false">{</mo><msub><mi>L</mi><mi>g</mi></msub><mo stretchy="false">}</mo></mrow><mrow><mi>g</mi><mo>∈</mo><mi>G</mi></mrow></msub></mrow></math> is a <em class="ltx_emph ltx_font_italic">left</em> action,
+while <math id="p6.m8" class="ltx_Math" alttext="(c,g)\mapsto c\circ L_{g}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>g</mi><mo stretchy="false">)</mo></mrow><mo>↦</mo><mrow><mi>c</mi><mo>∘</mo><msub><mi>L</mi><mi>g</mi></msub></mrow></mrow></math> is a <em class="ltx_emph ltx_font_italic">right</em> action.
+It is of course possible to only use left action
+by defining <math id="p6.m9" class="ltx_Math" alttext="F_{\mathcal{A}}(c)(g)" display="inline"><mrow><msub><mi>F</mi><mi class="ltx_font_mathcaligraphic">𝒜</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>g</mi><mo stretchy="false">)</mo></mrow></mrow></math> as
+<math id="p6.m10" class="ltx_Math" alttext="f\left(\left.{(c\circ L_{g^{-1}})}\right|_{\mathcal{N}}\right)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo>(</mo><msub><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>∘</mo><msub><mi>L</mi><msup><mi>g</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></msub></mrow><mo stretchy="false">)</mo></mrow><mo fence="true">|</mo></mrow><mi class="ltx_font_mathcaligraphic">𝒩</mi></msub><mo>)</mo></mrow></mrow></math>
+instead:
+since this is just a <em class="ltx_emph ltx_font_italic">reparametrization</em> of the family <math id="p6.m11" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>,
+the bulk of the theory does not change.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p">More to come …</p>
+</div>
+<div id="p8" class="ltx_para ltx_align_right">
+<table class="ltx_tabular ltx_guessed_headers ltx_align_middle">
+<tbody class="ltx_tbody">
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l ltx_border_t">Title</th>
+<td class="ltx_td ltx_align_left ltx_border_r ltx_border_t">cellular automaton</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Canonical name</th>
+<td class="ltx_td ltx_align_left ltx_border_r">CellularAutomaton</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Date of creation</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:21:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified on</th>
+<td class="ltx_td ltx_align_left ltx_border_r">2013-03-22 19:21:58</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Owner</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Ziosilvio (18733)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Last modified by</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Ziosilvio (18733)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Numerical id</th>
+<td class="ltx_td ltx_align_left ltx_border_r">5</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Author</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Ziosilvio (18733)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Entry type</th>
+<td class="ltx_td ltx_align_left ltx_border_r">Definition</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 37B15</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Classification</th>
+<td class="ltx_td ltx_align_left ltx_border_r">msc 68Q80</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">neighborhood (cellular automaton)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">neighborhood index (cellular automaton)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_r">local function (cellular automaton)</td>
+</tr>
+<tr class="ltx_tr">
+<th class="ltx_td ltx_align_left ltx_th ltx_th_row ltx_border_b ltx_border_l">Defines</th>
+<td class="ltx_td ltx_align_left ltx_border_b ltx_border_r">global function (cellular automaton)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Feb  9 20:45:34 2018 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
